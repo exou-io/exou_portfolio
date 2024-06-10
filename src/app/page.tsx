@@ -1,19 +1,11 @@
+import Hero from "@/components/Hero";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative bg-black-100 justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div>
-        <h1>
-          Hello to you too more more more more Hello to you too more more more
-          more Hello to you too more more more more Hello to you too more more
-          more more Hello to you too more more more more Hello to you too more
-          more more more Hello to you too more more more more Hello to you too
-          more more more moreHello to you too more more more moreHello to you
-          too more more more moreHello to you too more more more moreHello to
-          you too more more more moreHello to you too more more more moreHello
-          to you too more more more more
-        </h1>
+        <Hero />
       </div>
     </main>
   );
