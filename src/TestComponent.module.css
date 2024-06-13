@@ -12,7 +12,7 @@
 .divContent {
   margin-bottom: 20px;
   overflow: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease-out;
   cursor: pointer;
   position: relative;
   padding: 10px;
@@ -25,7 +25,7 @@
 
 .activeContent {
   position: relative;
-  padding: 10px;
+  padding-bottom: 5px;
   border-radius: 8px;
   background: linear-gradient(
     135deg,
@@ -52,7 +52,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg, #ccc 0%, #0070f3 100%);
+  background: linear-gradient(-90deg, #ccc 0%, #0070f3 100%);
   box-shadow: 0 0 10px #0070f3;
 }
 
@@ -70,16 +70,16 @@
 }
 
 .innerAurora {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   padding: 20px;
-  text-align: center;
+  text-align: left;
   color: #fff;
 }

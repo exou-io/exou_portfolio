@@ -12,24 +12,29 @@ interface DivContent {
 
 const divContents: DivContent[] = [
   {
-    heading: "Heading 1",
+    heading: "Decision Support System with Integrated ML",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     imageUrl: "/EXOU_full_logo_medium.png",
   },
   {
-    heading: "Heading 2",
-    text: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+    heading: "Your Personal Growth & Business Analyst",
+    text: "Ever wondered how it would be like to have questions and get them answered within seconds? --- We built this tool for large scale organisations but we don't like status-quo on knowledge & information so we are bringing it to everyone! *KNOW MORE HERE*",
     imageUrl: "/Zeeshan_Siddiqui-profile.jpeg",
   },
   {
-    heading: "Heading 3",
+    heading: "Workflow Automation",
     text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.",
     imageUrl: "/EXOU_full_logo_medium.png",
   },
   {
-    heading: "Heading 4",
-    text: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+    heading: "Complex Workflows? Perfect tool for Product, Dev, & Operations",
+    text: "If you are someone who appreciates a well-tailored perfect-fit-to-inch Suit then imagine such a suit for your organisational workflows. That's right, we built a tool for a problem that we faced ourselves and could not find a single tool in the market that would match our standards and requirements. *FIND OUT HOW OUR CUSTOMERS ARE USING IT*",
     imageUrl: "/Zeeshan_Siddiqui-profile.jpeg",
+  },
+  {
+    heading: "Automated Customer Support and Lead Management",
+    text: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+    imageUrl: "/EXOU_full_logo_medium.png",
   },
 ];
 
@@ -49,7 +54,7 @@ const MyComponent: React.FC = () => {
         setKey((prevKey) => prevKey + 1);
         return nextDiv;
       });
-    }, 5000);
+    }, 8000);
   }, []);
 
   useEffect(() => {
@@ -89,20 +94,20 @@ const MyComponent: React.FC = () => {
           >
             {index === currentDiv ? (
               <div className={styles.activeContent}>
-                <h2>{content.heading}</h2>
-                <p>{content.text}</p>
+                {/* <h2>{content.heading}</h2>
+                <p>{content.text}</p> */}
                 <motion.div
                   key={key}
                   className={styles.progressBar}
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
-                  transition={{ duration: 5, delay: 0.5 }} // Start progress bar after div expansion
+                  transition={{ duration: 8, delay: 0.5 }} // Start progress bar after div expansion; and match duration with interval
                 />
                 <div className={styles.auroraBackground}>
                   <AuroraBackground>
                     <div className={styles.innerAurora}>
-                      <h2>{content.heading}</h2>
-                      <p>{content.text}</p>
+                      <h2 className="pt-2 pb-3">{content.heading}</h2>
+                      <p className="pb-3">{content.text}</p>
                     </div>
                   </AuroraBackground>
                 </div>
