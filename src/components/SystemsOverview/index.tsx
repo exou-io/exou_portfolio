@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/AuroraBackground"; // Import AuroraBackground
-import styles from "@/TestComponent.module.css";
+import styles from "@/components/SystemsOverview/SystemsOverview.module.css";
 
 interface DivContent {
   heading: string;
@@ -13,7 +13,7 @@ interface DivContent {
 const divContents: DivContent[] = [
   {
     heading: "Decision Support System with Integrated ML",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    text: "Discover how the tech of the future can help you today. Our advanced analytics and AI system takes care of your data collection, processing, cleaning, and storing. The goal of the system is to generate actionable insights suited to your business. Integrated machine learning deeply analyses your data and generates highly accurate forecasts and predictions. *LEARN MORE ABOUT USE-CASES HERE*",
     imageUrl: "/EXOU_full_logo_medium.png",
   },
   {
@@ -23,7 +23,7 @@ const divContents: DivContent[] = [
   },
   {
     heading: "Workflow Automation",
-    text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.",
+    text: "A comprehensive automation tool capable of integrating across mobility, supply chain, delivery, media, and customer support systems. Built with the aim to streamline operations, enhance efficiency, and enable revenue generation through automation, optimizing resource allocation, and providing a wide variety of alerts and task hand-off scenarios. Integrating deeply across all business domains.",
     imageUrl: "/EXOU_full_logo_medium.png",
   },
   {
@@ -75,16 +75,18 @@ const SystemsOverview: React.FC = () => {
   };
 
   return (
-    <span className="pt-24 flex items-center justify-center z-10">
-      <div className="max-w-[80vw]">
+    <span className="flex items-center justify-center z-10 min-w-full">
+      <div className="">
         <div className="flex justify-between items-start">
-          <div className="lg:flex w-3/5">
-            <div className="py-10 pr-5 flex flex-col flex-1 w-[100vw]">
+          <div className="lg:flex lg:w-3/5">
+            <div className="pr-5 flex flex-col flex-1">
               {divContents.map((content, index) => (
                 <motion.div
                   key={index}
                   // className={`${styles.divContent} ${index === currentDiv ? styles.active : ""}`}
-                  className={`${styles.divContent} ${index === currentDiv ? styles.active : ""}`}
+                  //   className={`${styles.divContent} ${index === currentDiv ? styles.active : ""}`}
+                  //   className={`absolute max-w-50 ${index === currentDiv ? "" : ""}`}
+                  className="py-5 relative mb-2 overflow-hidden transition ease-out delay-150 cursor-pointer rounded-lg"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{
                     opacity: index === currentDiv ? 1 : 0.5,
@@ -123,7 +125,7 @@ const SystemsOverview: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="py-10 pl-5 hidden lg:flex lg:flex-1 lg:w-2/5">
+          <div className="pl-5 hidden lg:flex lg:flex-1 lg:w-2/5">
             <motion.img
               key={currentDiv}
               src={divContents[currentDiv].imageUrl}

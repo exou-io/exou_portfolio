@@ -9,7 +9,7 @@
   padding: 20px;
 }
 
-/* .divContent {
+.divContent {
   margin-bottom: 20px;
   overflow: hidden;
   transition: all 0.2s ease-out;
@@ -18,8 +18,7 @@
   padding: 5px;
   border-radius: 8px;
   max-height: auto;
-  max-width: 80%;
-} */
+}
 
 .divContent.active {
   animation: gradient-animation 3s infinite;
