@@ -7,7 +7,7 @@ import ProfileHeroSection from "@/components/Profile/ProfileHero";
 import ProfilePhotoBox from "@/components/Profile/ProfilePhotoBox";
 import ContactWithNewsletter from "@/components/ContactNewsletter";
 
-export function EvervaultCardDemo() {
+function EvervaultCardDemo() {
   return (
     <section>
       <section>
