@@ -44,7 +44,7 @@ const NewsLatterBox = () => {
         </p>
       </div>
 
-      <div>
+      {/* <div>
         <span className="absolute left-2 top-7">
           <svg
             width="57"
@@ -259,7 +259,7 @@ const NewsLatterBox = () => {
             </defs>
           </svg>
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import BusinessScalingToolsHeader from "./ScalingToolsHeader";
 
 export default function ScaleBusinessWithUs() {
   return (
-    <section>
+    <section className="min-w-full">
       <div className="pt-24 flex flex-col items-center min-w-full z-10">
         <div className="flex flex-col justify-center">
           <div className="h-[95vh]">

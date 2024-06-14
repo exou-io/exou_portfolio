@@ -77,7 +77,7 @@ const SystemsOverview: React.FC = () => {
   return (
     <span className="flex items-center justify-center z-10 min-w-full">
       <div className="">
-        <div className="flex justify-between items-start">
+        <div className="flex justify-between">
           <div className="lg:flex lg:w-3/5">
             <div className="pr-5 flex flex-col flex-1">
               {divContents.map((content, index) => (
@@ -125,16 +125,22 @@ const SystemsOverview: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="pl-5 hidden lg:flex lg:flex-1 lg:w-2/5">
-            <motion.img
-              key={currentDiv}
-              src={divContents[currentDiv].imageUrl}
-              alt={`Image for ${divContents[currentDiv].heading}`}
-              className={styles.image}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            />
+          <div className="flex justify-center items-center h-auto lg:w-2/5">
+            <div className="hidden lg:flex lg:flex-1 lg:w-2/5">
+              <AuroraBackground>
+                <div className="ml-7 mt-7 mb-7 z-10 float-right">
+                  <motion.img
+                    key={currentDiv}
+                    src={divContents[currentDiv].imageUrl}
+                    alt={`Image for ${divContents[currentDiv].heading}`}
+                    className="border-r-8 h-auto w-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                </div>
+              </AuroraBackground>
+            </div>
           </div>
         </div>
       </div>
