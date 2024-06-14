@@ -4,6 +4,7 @@ import Hero from "@/components/Hero1";
 import ScaleBusinessWithUs from "@/components/ScaleBusiness";
 import FeatureGrid3x3 from "@/components/FeatureGrid3x3";
 import GridWithFlexVerticalLayout from "@/components/GridWithFlexVerticalLO";
+// import ContactUsMain from "@/components/ContactUs"; // removed due to error
 
 export default function LandingPage() {
   return (
