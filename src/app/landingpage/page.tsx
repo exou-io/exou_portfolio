@@ -6,7 +6,7 @@ import FeatureGrid3x3 from "@/components/FeatureGrid3x3";
 import GridWithFlexVerticalLayout from "@/components/GridWithFlexVerticalLO";
 // import ContactUsMain from "@/components/ContactUs"; // removed due to error
 
-export default function LandingPage() {
+export function LandingPage() {
   return (
     <main className="relative bg-black-100 flex flex-col overflow-hidden mx-auto sm:px-10 justify-center items-center px-5">
       <div className="w-full h-[85vh]">
@@ -25,3 +25,9 @@ export default function LandingPage() {
     </main>
   );
 }
+
+function TestingLandingPage() {
+  return <div>Internal Link only</div>;
+}
+
+export default TestingLandingPage;
